@@ -1,0 +1,56 @@
+<resources>
+
+    <style name="AppTheme" parent="Theme.AppCompat.Light.NoActionBar">
+        <item name="colorPrimary">@color/colorPrimary</item>
+        <item name="colorPrimaryDark">@color/colorPrimaryDark</item>
+        <item name="colorAccent">@color/colorAccent</item>
+    </style>
+
+    <style name="WorkshopTitleEditText" parent="Theme.AppCompat.NoActionBar">
+        <item name="colorPrimary">#00f</item>
+        <item name="colorPrimaryDark">#9ff</item>
+        <item name="colorAccent">#c2c2c2</item>
+        <item name="android:textColor">#c2c2c2</item>
+        <item name="android:textColorHint">#c2c2c2</item>
+        <item name="android:textColorPrimary">#fff</item>
+    </style>
+
+    <style name="AppTheme2" parent="Theme.AppCompat.Light.NoActionBar">
+        <item name="colorPrimary">#062a44</item>
+        <item name="colorPrimaryDark">#061c2d</item>
+        <item name="colorAccent">#087f8c</item>
+        <item name="android:textColorPrimary">#fff</item>
+    </style>
+
+    <style name="AppTheme3" parent="Theme.AppCompat.Light.NoActionBar">
+        <item name="colorPrimary">#000</item>
+        <item name="colorPrimaryDark">#fff</item>
+        <item name="colorAccent">#087f8c</item>
+
+    </style>
+
+    <style name="PostBlogFragmentTheme" parent="Theme.AppCompat.Light.NoActionBar">
+        <item name="colorPrimary">#702632</item>
+        <item name="colorPrimaryDark">#360000</item>
+        <item name="colorAccent">#087f8c</item>
+
+    </style>
+
+    <style name="Btn" parent="Widget.AppCompat.Button.Colored">
+        <item name="android:background">#30ffffff</item>
+        <item name="android:textColor">#fff</item>
+    </style>
+
+    <style name="BrandButtonStyle" parent="Widget.AppCompat.Button.Colored">
+        <item name="android:colorButtonNormal">#ffffff</item>
+        <item name="android:textColor">#fff</item>
+
+    </style>
+
+    <style name="MyStyle" parent="Base.Widget.AppCompat.Button.Colored">
+        <item name="android:background">@drawable/btn_colored_my_material</item>
+        <item name="android:textAppearance">@style/TextAppearance.AppCompat.Widget.Button.Inverse</item>
+    </style>
+
+
+</resources>

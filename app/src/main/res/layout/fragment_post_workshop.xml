@@ -1,0 +1,322 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:orientation="vertical"
+    app:theme="@style/AppTheme2"
+    android:background="@color/colorPrimary"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+    <android.support.v4.widget.NestedScrollView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+        <LinearLayout
+            android:orientation="vertical"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:id="@+id/ll"
+                android:background="@color/colorPrimary"
+                android:orientation="vertical">
+
+                <android.support.design.widget.TextInputLayout
+                    android:layout_width="match_parent"
+                    android:padding="0dp"
+                    android:gravity="center"
+                    android:layout_marginTop="8dp"
+                    android:layout_marginBottom="8dp"
+                    android:layout_marginLeft="16dp"
+                    android:layout_marginRight="16dp"
+                    android:layout_height="match_parent"
+                    app:theme="@style/WorkshopTitleEditText"
+                    >
+
+                    <EditText
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:hint="Workshop Title"
+                        android:textSize="24sp"
+                        app:hintTextAppearance="@style/WorkshopTitleEditText"
+                        android:id="@+id/workshopEditText"
+                        />
+
+                </android.support.design.widget.TextInputLayout>
+
+
+            </LinearLayout>
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/ll"
+                android:orientation="vertical">
+
+                <EditText
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:padding="16dp"
+                    android:hint="ORGANISER"
+                    android:textSize="14sp"
+                    android:fontFamily="sans-serif-light"
+                    android:letterSpacing="0.1"
+                    android:layout_marginLeft="16dp"
+                    android:layout_marginRight="16dp"
+                    android:layout_marginTop="8dp"
+                    android:layout_marginBottom="4dp"
+                    android:id="@+id/instructorNameText"
+                    android:textColorHint="@color/colorHintText"
+                    android:background="@color/colorPrimaryHint"
+                    />
+
+                <EditText
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:padding="16dp"
+                    android:textSize="14sp"
+                    android:hint="CONTACT DETAILS"
+                    android:layout_marginLeft="16dp"
+                    android:fontFamily="sans-serif-light"
+                    android:letterSpacing="0.1"
+                    android:layout_marginRight="16dp"
+                    android:layout_marginBottom="4dp"
+                    android:id="@+id/instructorContactText"
+                    android:textColorHint="@color/colorHintText"
+                    android:background="@color/colorPrimaryHint"
+                    />
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:background="@color/colorPrimaryHint"
+                    android:layout_marginLeft="16dp"
+                    android:layout_marginRight="16dp"
+                    android:layout_marginBottom="4dp"
+                    android:orientation="horizontal">
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="vertical"
+                        android:gravity="center"
+                        android:layout_weight="0.5">
+
+                        <Button
+                            android:padding="8dp"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="PICK DATE"
+                            android:layout_below="@id/workshopEditText"
+                            android:textSize="14sp"
+                            android:id="@+id/button"
+                            android:textColor="#c2c2c2"
+                            style="@style/MyStyle"
+                            android:textAlignment="center"
+                            android:letterSpacing="0.1" />
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text=""
+
+                            android:padding="16dp"
+                            android:textSize="14sp"
+
+                            android:textColor="#fff"
+                            android:layout_below="@id/button"
+                            android:textAlignment="textStart"
+                            android:fontFamily="sans-serif-thin"
+                            android:id="@+id/dateTextView"/>
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="vertical"
+                        android:gravity="center"
+                        android:layout_weight="0.5">
+                        <Button
+                            android:padding="8dp"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="PICK TIME"
+                            android:textSize="14sp"
+                            android:id="@+id/button2"
+                            android:textColor="#c2c2c2"
+                            style="@style/MyStyle"
+                            android:textAlignment="center"
+                            android:letterSpacing="0.1" />
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text=""
+                            android:padding="16dp"
+                            android:textSize="14sp"
+                            android:id="@+id/timeTextView"
+                            android:textColor="#fff"
+                            android:fontFamily="sans-serif-thin"
+                            android:textAlignment="textStart"/>
+
+                    </LinearLayout>
+
+
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:background="@color/colorPrimaryHint"
+                    android:layout_marginLeft="16dp"
+                    android:layout_marginRight="16dp"
+                    android:padding="0dp"
+                    android:orientation="vertical">
+
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:text="SELECT BLOCK"
+                        android:fontFamily="sans-serif-light"
+                        android:letterSpacing="0.1"
+
+                        android:textColor="@color/colorHintText"
+                        android:paddingLeft="16dp"
+                        android:paddingTop="8dp"
+                        android:paddingBottom="8dp"
+                        android:paddingRight="8dp"
+                        />
+
+
+                    <RadioGroup
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:id="@+id/block_radio_group"
+                        android:gravity="center"
+                        android:orientation="horizontal"
+                        android:paddingBottom="5dp"
+                        android:weightSum="3"
+                        >
+
+                        <android.support.v7.widget.AppCompatRadioButton
+                            android:textColor="@color/colorHintText"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="1"
+                            android:buttonTint="@color/colorHintText"
+                            android:text="E"/>
+
+                        <android.support.v7.widget.AppCompatRadioButton
+
+                            android:textColor="@color/colorHintText"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="1"
+                            android:buttonTint="@color/colorHintText"
+                            android:text="D"/>
+
+                        <android.support.v7.widget.AppCompatRadioButton
+                            android:textColor="@color/colorHintText"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:buttonTint="@color/colorHintText"
+                            android:text="C"/>
+
+
+                    </RadioGroup>
+
+                </LinearLayout>
+
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:background="@color/colorPrimaryHint"
+                    android:layout_marginLeft="16dp"
+                    android:layout_marginRight="16dp"
+                    android:layout_marginTop="4dp"
+                    android:padding="0dp"
+                    android:orientation="vertical">
+
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:text="CHOOSE CATEGORY"
+                        android:fontFamily="sans-serif-light"
+                        android:letterSpacing="0.1"
+
+                        android:textColor="@color/colorHintText"
+                        android:paddingLeft="16dp"
+                        android:paddingTop="8dp"
+                        android:paddingBottom="8dp"
+                        android:paddingRight="8dp"
+                        />
+
+                    <RadioGroup
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:gravity="center"
+                        android:orientation="horizontal"
+                        android:paddingBottom="5dp"
+                        android:weightSum="2"
+
+                        android:id="@+id/category_radio_group"
+                        >
+
+                        <RadioButton
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="1"
+                            android:buttonTint="@color/colorHintText"
+                            android:textColor="@color/colorHintText"
+
+                            android:text="Tech"/>
+
+                        <RadioButton
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:buttonTint="@color/colorHintText"
+                            android:textColor="@color/colorHintText"
+                            android:text="Non Tech"/>
+                    </RadioGroup>
+
+                </LinearLayout>
+
+                <EditText
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:padding="16dp"
+                    android:layout_marginLeft="16dp"
+                    android:layout_marginRight="16dp"
+                    android:layout_marginTop="4dp"
+                    android:layout_marginBottom="4dp"
+                    android:textColorHint="@color/colorHintText"
+                    android:background="@color/colorPrimaryHint"
+                    android:hint="INSTRUCTOR'S NOTES"
+                    android:fontFamily="sans-serif-light"
+                    android:letterSpacing="0.1"
+                    android:id="@+id/instructorEditText"
+                    android:textSize="14sp"
+                    android:inputType="textMultiLine"
+
+                    />
+            </LinearLayout>
+
+
+        </LinearLayout>
+    </android.support.v4.widget.NestedScrollView>
+
+
+    <android.support.design.widget.FloatingActionButton
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:layout_alignParentEnd="true"
+        android:layout_alignParentRight="true"
+        android:layout_gravity="end|bottom"
+        app:fabSize="normal"
+
+        android:layout_margin="16dp"
+        android:src="@drawable/ic_check_black_24dp"
+        android:id="@+id/fab"
+        />
+
+
+</RelativeLayout>

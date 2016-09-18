@@ -1,0 +1,145 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    app:theme="@style/AppTheme3"
+    tools:context="xyz.hemangkumar.rnfapp.BlogPostActivity">
+    <android.support.v4.widget.NestedScrollView
+        android:layout_width="wrap_content"
+
+        android:layout_height="wrap_content">
+
+
+<LinearLayout
+    android:background="#fff"
+    android:orientation="vertical"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content">
+<LinearLayout
+
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="vertical"
+    android:gravity="center_horizontal"
+    android:id="@+id/ll_header_blog"
+    android:background="@drawable/scenery"
+    android:padding="16dp">
+
+
+    <TextView
+        android:layout_marginTop="20dp"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        fontPath="fonts/latoBlack.ttf"
+        android:textSize="24sp"
+        android:paddingTop="10dp"
+        android:paddingLeft="10dp"
+        android:paddingRight="10dp"
+        android:gravity="center"
+        android:textColor="#fff"
+        android:textAllCaps="true"
+        android:text="THE THEORY OF EVERYTHING"
+        android:id="@+id/header_title"
+        />
+    <TextView
+android:gravity="center"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/header_title"
+        android:id="@+id/header_author"
+        fontPath = "fonts/latoBold.ttf"
+        android:textColor="#fff"
+        android:padding="10dp"
+        android:text="Stephen Hawking"/>
+    <TextView
+        android:gravity="center"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="LEISURE"
+        fontPath="fonts/latoBlack.ttf"
+        android:textSize="12sp"
+        android:layout_below="@id/header_author"
+
+        android:background="@drawable/rounded_corner_rec"
+        android:elevation="8dp"
+        android:padding="5dp"
+        android:textColor="#a2a2a2"/>
+
+
+
+
+</LinearLayout>
+    <LinearLayout
+        android:layout_below="@+id/ll_header_blog"
+        android:layout_width="match_parent"
+        android:orientation="horizontal"
+        android:layout_marginBottom="?attr/actionBarSize"
+        android:layout_height="wrap_content">
+
+        <TextView
+            android:padding="16dp"
+            android:background="#fff"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:lineSpacingExtra="10dp"
+            android:textSize="16sp"
+           fontPath = "fonts/latoRegular.ttf"
+            android:text="After months of tests and training, the Dutch National Police are adding new recruits to their ranks — eagles that target and take down drones. The police recently purchased young eagle chicks that will be trained as they grow to disable drones in flight, and officials expect that this new branch of the Dutch “air force” will be ready to take wing in about six months."/>
+    </LinearLayout>
+        </LinearLayout>
+    </android.support.v4.widget.NestedScrollView>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="?attr/actionBarSize"
+        android:layout_alignParentEnd="true"
+        android:layout_alignParentBottom="true"
+        android:padding="16dp"
+        android:elevation="8dp"
+        android:gravity="right"
+        android:orientation="horizontal"
+        android:background="#fff">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textSize="14sp"
+            fontPath="fonts/latolight.ttf"
+            android:layout_marginRight="5dp"
+            android:text="16"/>
+        <com.sackcentury.shinebuttonlib.ShineButton
+            android:layout_marginRight="15dp"
+            android:layout_width="24dp"
+            android:layout_height="24dp"
+            android:layout_centerInParent="true"
+            android:src="@android:color/darker_gray"
+            android:id="@+id/shine_button"
+            app:btn_color="@android:color/darker_gray"
+            app:btn_fill_color="@android:color/holo_green_dark"
+            app:allow_random_color="false"
+
+            app:siShape="@raw/smile"/>
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textSize="14sp"
+            fontPath="fonts/latolight.ttf"
+            android:layout_marginRight="5dp"
+            android:text="24"/>
+
+        <com.sackcentury.shinebuttonlib.ShineButton
+            android:layout_marginRight="5dp"
+            android:layout_width="24dp"
+            android:layout_height="24dp"
+            android:layout_centerInParent="true"
+            android:src="@android:color/darker_gray"
+            android:id="@+id/shine_button2"
+            app:btn_color="@android:color/darker_gray"
+            app:btn_fill_color="@android:color/holo_red_dark"
+            app:allow_random_color="false"
+
+            app:siShape="@raw/heart"/>
+       </LinearLayout>
+</RelativeLayout>

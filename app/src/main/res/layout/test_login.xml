@@ -1,0 +1,264 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/colorPrimary"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/relative_layout"
+    android:elevation="4dp"
+    tools:context=".MainActivity"
+    android:fillViewport="true">
+
+
+    <EditText
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:background="#282f3c"
+        android:hint="Workshop Title"
+        android:textSize="24sp"
+        android:ems="20"
+        android:layout_margin="16dp"
+        android:padding="16dp"
+        android:textColorHint="@color/colorPrimary"
+        android:inputType="textMultiLine"
+        android:textColor="@color/colorAccent"
+        android:id="@+id/workshopEditText"
+
+
+        >
+
+
+
+    </EditText>
+
+       <EditText
+                android:layout_below="@id/workshopEditText"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="#282f3c"
+                android:hint="Organiser"
+                android:textSize="16sp"
+                android:ems="20"
+                android:padding="16dp"
+                android:layout_margin="16dp"
+                android:textColorHint="#400f0f"
+                android:inputType="textMultiLine"
+                android:textColor="@color/colorAccent"
+                android:id="@+id/instructorNameText"
+                />
+
+    <EditText
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="#282f3c"
+        android:hint="Contact Details"
+        android:textSize="16sp"
+        android:ems="20"
+        android:padding="16dp"
+        android:layout_margin="16dp"
+        android:textColorHint="@color/colorPrimary"
+        android:inputType="textMultiLine"
+
+        android:id="@+id/instructorContactText"
+        android:layout_below="@id/instructorNameText"
+        />
+
+
+
+
+
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:weightSum="1"
+            android:id="@+id/pick_date"
+            android:layout_below="@id/instructorContactText"
+            android:orientation="horizontal">
+
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_weight="0.5"
+                android:orientation="vertical">
+                <Button
+                    android:layout_weight="0.1"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="PICK DATE"
+                    android:layout_below="@id/workshopEditText"
+
+                    android:id="@+id/button"
+                    style="@android:style/Widget.Material.Light.Button.Borderless.Colored" />
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_weight="0.9"
+                    android:layout_height="wrap_content"
+                    android:text="Date :"
+                    android:textStyle="bold"
+                    android:padding="16dp"
+                    android:textSize="14sp"
+                    android:layout_below="@id/button"
+                    android:textAlignment="textStart"
+                    android:id="@+id/dateTextView"/>
+            </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_weight="0.5"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+            <Button
+                android:layout_width="wrap_content"
+                android:layout_weight="0.1"
+                android:layout_height="wrap_content"
+                android:text="PICK TIME"
+                android:id="@+id/button2"
+                android:textSize="14sp"
+
+                android:textAlignment="center"
+                style="@android:style/Widget.Material.Button.Borderless.Colored" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Time : "
+                android:layout_weight="0.9"
+                android:textStyle="bold"
+                android:padding="16dp"
+                android:textSize="14sp"
+                android:id="@+id/timeTextView"
+
+                android:textAlignment="textStart"/>
+
+        </LinearLayout>
+        </LinearLayout>
+
+
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+
+
+            >
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Block: "
+
+                android:textStyle="bold"
+                android:padding="16dp"
+                android:textSize="14sp"
+
+                />
+
+            <RadioGroup
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:id="@+id/block_radio_group"
+                android:gravity="center"
+                android:orientation="horizontal"
+                android:padding="10dp"
+                android:weightSum="3"
+                >
+
+                <RadioButton
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+
+                    android:text="E"/>
+
+                <RadioButton
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:text="D"/>
+                <RadioButton
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+
+                    android:text="C"/>
+
+
+            </RadioGroup>
+
+        </LinearLayout>
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+
+
+            >
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Category: "
+                android:textStyle="bold"
+                android:padding="16dp"
+
+                android:textSize="14sp"
+                />
+
+            <RadioGroup
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:gravity="center"
+                android:orientation="horizontal"
+                android:padding="10dp"
+                android:weightSum="2"
+
+                android:id="@+id/category_radio_group"
+                >
+
+                <RadioButton
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:text="Tech"/>
+
+                <RadioButton
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:text="Non Tech"/>
+            </RadioGroup>
+
+        </LinearLayout>
+
+        <android.support.design.widget.TextInputLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            >
+
+            <EditText
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:hint="INSTRUCTOR'S NOTES"
+                android:textSize="14sp"
+                android:inputType="textMultiLine"
+                android:textColor="@color/colorAccent"
+                android:id="@+id/instructorEditText"
+                />
+
+        </android.support.design.widget.TextInputLayout>
+
+
+    <android.support.design.widget.FloatingActionButton
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:layout_alignParentEnd="true"
+        android:layout_alignParentRight="true"
+        android:layout_gravity="end|bottom"
+        app:fabSize="normal"
+        android:layout_margin="16dp"
+        android:src="@drawable/ic_check_black_24dp"
+        android:id="@+id/fab"
+        />
+
+</RelativeLayout>
