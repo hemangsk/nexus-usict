@@ -43,10 +43,10 @@
             android:layout_height="match_parent"
             android:layout_weight="0.8"
             android:orientation="vertical"
-            android:paddingLeft="10dp"
-            android:padding="10dp">
+            android:paddingLeft="5dp"
+            android:padding="5dp">
             <TextView
-                android:id="@+id/workshop_title"
+                android:id="@+id/event_title"
                 android:layout_width="match_parent"
                 android:layout_height="0dp"
                 android:text="Android Code Camp"
@@ -56,6 +56,21 @@
                 android:fontFamily="sans-serif-thin"
                 android:layout_weight="0.3"
                 />
+            <TextView
+                android:id="@+id/event_category"
+                android:layout_width="match_parent"
+                android:layout_height="0dp"
+                android:text="WORKSHOP"
+                android:textSize="12sp"
+                android:layout_gravity="center"
+                android:gravity="center_horizontal"
+                android:fontFamily="sans-serif-condensed"
+                android:layout_weight="0.1"
+
+                />
+
+
+
             <LinearLayout
                 android:layout_width="match_parent"
                 android:orientation="horizontal"
@@ -82,7 +97,7 @@
                         android:gravity="center"
                         android:text="24-6 to 6-8"
                         android:fontFamily="sans-serif-condensed"
-                        android:id="@+id/workshop_date"/>
+                        android:id="@+id/event_date"/>
                 </LinearLayout>
 
 
@@ -106,7 +121,7 @@
                         android:padding="2dp"
                         android:fontFamily="sans-serif-condensed"
 
-                        android:id="@+id/workshop_time"/>
+                        android:id="@+id/event_time"/>
                 </LinearLayout>
             </LinearLayout>
 
@@ -128,9 +143,9 @@
                     android:layout_weight="0.7"
                     style="@android:style/Widget.Material.Light.Button.Borderless.Small"
                     android:layout_gravity="right"
-                    android:id="@+id/workshop_block"/>
+                    android:id="@+id/event_venue"/>
                 <Button
-                    android:id="@+id/message_button"
+                    android:id="@+id/event_details_button"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                    android:layout_gravity="right"

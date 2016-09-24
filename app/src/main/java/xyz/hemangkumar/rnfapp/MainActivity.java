@@ -1,7 +1,6 @@
 package xyz.hemangkumar.rnfapp;
 
 import android.content.Context;
-import android.content.Intent;
 import android.support.annotation.Nullable;
 import android.support.design.widget.NavigationView;
 import android.support.v4.app.Fragment;
@@ -12,22 +11,17 @@ import android.support.v7.app.ActionBarDrawerToggle;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.support.v7.widget.Toolbar;
-import android.util.Log;
 import android.view.MenuItem;
-import android.widget.Toast;
-
-import java.sql.Time;
 
 import uk.co.chrisjenx.calligraphy.CalligraphyContextWrapper;
 import xyz.hemangkumar.rnfapp.fragments.About;
 import xyz.hemangkumar.rnfapp.fragments.Board;
 import xyz.hemangkumar.rnfapp.fragments.Calculator;
+import xyz.hemangkumar.rnfapp.fragments.Events;
 import xyz.hemangkumar.rnfapp.fragments.Home;
 import xyz.hemangkumar.rnfapp.fragments.PostBlog;
 import xyz.hemangkumar.rnfapp.fragments.PostEvent;
-import xyz.hemangkumar.rnfapp.fragments.PostWorkshop;
 import xyz.hemangkumar.rnfapp.fragments.TimeTable;
-import xyz.hemangkumar.rnfapp.fragments.Workshop;
 
 public class MainActivity extends AppCompatActivity implements NavigationView.OnNavigationItemSelectedListener {
 
@@ -90,13 +84,10 @@ public class MainActivity extends AppCompatActivity implements NavigationView.On
             case R.id.home_list: fragment = Home.newInstance();
                 break;
 
-            case R.id.workshop_list: fragment = Workshop.newInstance();
+            case R.id.event_list: fragment = Events.newInstance();
                 break;
 
             case R.id.tt_list: fragment = TimeTable.newInstance();
-                break;
-
-            case R.id.post_workshop_list: fragment = PostWorkshop.newInstance();
                 break;
 
             case R.id.post_event_list: fragment = PostEvent.newInstance();

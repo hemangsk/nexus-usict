@@ -9,36 +9,23 @@ public class Blog {
     String title;
     String date;
     String category;
+    String picture;
+    String subheading;
 
-    public String getSubheading() {
-        return subheading;
-    }
-
-    public void setSubheading(String subheading) {
-        this.subheading = subheading;
-    }
-
-    public Blog(String author, String text, String title, String date, String category, String subheading) {
-
+    public Blog(String author, String text, String title, String date, String category, String picture, String subheading) {
         this.author = author;
         this.text = text;
         this.title = title;
         this.date = date;
         this.category = category;
+        this.picture = picture;
         this.subheading = subheading;
     }
 
-    String subheading;
+
 
     public Blog(){
 
-    }
-    public Blog(String author, String text, String title, String date, String category) {
-        this.author = author;
-        this.text = text;
-        this.title = title;
-        this.date = date;
-        this.category = category;
     }
 
     public String getAuthor() {
@@ -81,4 +68,22 @@ public class Blog {
     public void setCategory(String category) {
         this.category = category;
     }
+
+    public String getPicture() {
+        return picture;
+    }
+
+    public void setPicture(String picture) {
+        this.picture = picture;
+    }
+
+    public String getSubheading() {
+        return subheading;
+    }
+
+    public void setSubheading(String subheading) {
+        this.subheading = subheading;
+    }
+
+
 }

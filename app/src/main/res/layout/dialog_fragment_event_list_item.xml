@@ -56,7 +56,7 @@
                 android:gravity="center"
                 android:text="Google Developers Group"
                 android:fontFamily="sans-serif-condensed"
-                android:id="@+id/workshop_organiser"/>
+                android:id="@+id/event_organiser"/>
         </LinearLayout>
 
         <LinearLayout
@@ -79,7 +79,7 @@
                 android:text="+919718368484"
                 android:textIsSelectable="true"
                 android:fontFamily="sans-serif-condensed"
-                android:id="@+id/workshop_contact"/>
+                android:id="@+id/event_contact"/>
         </LinearLayout>
     </LinearLayout>
 
@@ -95,6 +95,7 @@
 
 
             <TextView
+
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:text="Instructor's Notes"
@@ -117,7 +118,7 @@
         android:textSize="16sp"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:id="@+id/details_workshop_dialog"/>
+        android:id="@+id/event_detail"/>
 
     <Button
         android:layout_width="wrap_content"

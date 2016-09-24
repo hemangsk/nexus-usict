@@ -1,5 +1,7 @@
 package xyz.hemangkumar.rnfapp.fragments;
 
+import android.content.Context;
+import android.media.Image;
 import android.os.Bundle;
 import android.support.annotation.Nullable;
 import android.support.design.widget.NavigationView;
@@ -7,18 +9,22 @@ import android.support.v4.app.Fragment;
 import android.support.v7.widget.GridLayoutManager;
 import android.support.v7.widget.LinearLayoutManager;
 import android.support.v7.widget.RecyclerView;
+import android.util.Log;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
+import android.widget.ImageView;
 import android.widget.TextView;
 
 import com.firebase.client.Firebase;
 import com.firebase.ui.database.FirebaseRecyclerAdapter;
 import com.google.firebase.database.DatabaseReference;
 import com.google.firebase.database.FirebaseDatabase;
+import com.squareup.picasso.Picasso;
 
 import xyz.hemangkumar.rnfapp.R;
 import xyz.hemangkumar.rnfapp.models.*;
+import xyz.hemangkumar.rnfapp.utils.Ellipsize;
 
 /**
  * Created by Hemang on 04/09/16.
@@ -53,18 +59,6 @@ public class Board extends Fragment {
         Firebase.setAndroidContext(getActivity());
         FirebaseRecyclerAdapter<Blog, BlogHolder> firebaseRecyclerAdapter;
 
-
-        DatabaseReference ref = FirebaseDatabase.getInstance().getReference("blogs");
-        Blog blog = new Blog("Hemang", "THis", "Theory Of Everything", "January 6", "LEISURE", "The Story of my Tale");
-        ref.push().setValue(blog);
-        ref.push().setValue(blog);
-
-        ref.push().setValue(blog);
-
-        ref.push().setValue(blog);
-
-
-
         DatabaseReference databaseReference = FirebaseDatabase.getInstance().getReference("blogs");
         RecyclerView recycler = (RecyclerView) view.findViewById(R.id.recyclerview_blog);
 
@@ -77,11 +71,8 @@ public class Board extends Fragment {
                 if(mod == 0){
                     return 2;
                 }
-                else if(mod == 1 || mod == 2 ){
+                else {
                     return 1;
-                }
-                else{
-                    return 2;
                 }
 
             }
@@ -92,12 +83,7 @@ public class Board extends Fragment {
         firebaseRecyclerAdapter = new FirebaseRecyclerAdapter<Blog, BlogHolder>(Blog.class, R.layout.blog_list_item, BlogHolder.class, databaseReference) {
             @Override
             protected void populateViewHolder(BlogHolder blogViewHolder, Blog blog, int position) {
-                blogViewHolder.setTitle(blog.getTitle());
-               // blogViewHolder.setText(blog.getText());
-                blogViewHolder.setDate(blog.getDate());
-                blogViewHolder.setAuthor(blog.getAuthor());
-                blogViewHolder.setCategory(blog.getCategory());
-                blogViewHolder.setSubHeading(blog.getSubheading());
+                blogViewHolder.bindView(blog);
             }
         };
 
@@ -110,42 +96,43 @@ public class Board extends Fragment {
     private static class BlogHolder extends RecyclerView.ViewHolder{
 
         View view;
+        TextView title, text, subheading;
+        Context ctx;
 
         public BlogHolder(View itemView) {
             super(itemView);
             view = itemView;
+            ctx = itemView.getContext();
         }
 
-        public void setTitle(String data){
-            TextView textView = (TextView) view.findViewById(R.id.blog_title);
-            textView.setText(data.toString());
+        public void bindView(Blog blog){
+
+            TextView title, subheading, text;
+            title = (TextView) view.findViewById(R.id.blog_title);
+            subheading = (TextView) view.findViewById(R.id.blog_subheading_text);
+            text = (TextView) view.findViewById(R.id.blog_text);
+
+            ImageView image;
+            image = (ImageView) view.findViewById(R.id.blog_img_view);
+
+            if(blog.getPicture()!=null){
+                if(!blog.getPicture().equals("") && !blog.getPicture().equals(" ")){
+                    Picasso.with(ctx)
+                            .load(blog.getPicture())
+                            .into(image);
+                }
+                else{
+                    image.setImageResource(android.R.color.transparent);
+                }
+            }
+
+            title.setText(blog.getTitle());
+            text.setText(blog.getText());
+            subheading.setText(blog.getSubheading());
 
         }
-        public void setText(String data){
-           // TextView textView = (TextView) view.findViewById(R.id.blog_text);
-            //textView.setText(data.toString());
 
-        }
-        public void setAuthor(String data){
-            TextView textView = (TextView) view.findViewById(R.id.blog_author);
-            textView.setText(data.toString());
 
-        }
-        public void setDate(String data){
-            TextView textView = (TextView) view.findViewById(R.id.blog_date);
-            textView.setText(data.toString());
-
-        }
-        public void setCategory(String data){
-            TextView textView = (TextView) view.findViewById(R.id.blog_category);
-            textView.setText(data.toString());
-
-        }
-
-        public void setSubHeading(String data){
-            TextView textView = (TextView) view.findViewById(R.id.blog_subheading_text);
-            textView.setText(data.toString());
-        }
     }
 
 }

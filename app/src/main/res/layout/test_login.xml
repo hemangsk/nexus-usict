@@ -23,7 +23,7 @@
         android:textColorHint="@color/colorPrimary"
         android:inputType="textMultiLine"
         android:textColor="@color/colorAccent"
-        android:id="@+id/workshopEditText"
+        android:id="@+id/eventEditText"
 
 
         >
@@ -33,7 +33,7 @@
     </EditText>
 
        <EditText
-                android:layout_below="@id/workshopEditText"
+                android:layout_below="@id/eventEditText"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:background="#282f3c"
@@ -45,7 +45,7 @@
                 android:textColorHint="#400f0f"
                 android:inputType="textMultiLine"
                 android:textColor="@color/colorAccent"
-                android:id="@+id/instructorNameText"
+                android:id="@+id/organiserNameText"
                 />
 
     <EditText
@@ -60,8 +60,8 @@
         android:textColorHint="@color/colorPrimary"
         android:inputType="textMultiLine"
 
-        android:id="@+id/instructorContactText"
-        android:layout_below="@id/instructorNameText"
+        android:id="@+id/organiserContactText"
+        android:layout_below="@id/organiserNameText"
         />
 
 
@@ -74,7 +74,7 @@
             android:layout_height="wrap_content"
             android:weightSum="1"
             android:id="@+id/pick_date"
-            android:layout_below="@id/instructorContactText"
+            android:layout_below="@id/organiserContactText"
             android:orientation="horizontal">
 
             <LinearLayout
@@ -87,7 +87,7 @@
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:text="PICK DATE"
-                    android:layout_below="@id/workshopEditText"
+                    android:layout_below="@id/eventEditText"
 
                     android:id="@+id/button"
                     style="@android:style/Widget.Material.Light.Button.Borderless.Colored" />
@@ -242,7 +242,7 @@
                 android:textSize="14sp"
                 android:inputType="textMultiLine"
                 android:textColor="@color/colorAccent"
-                android:id="@+id/instructorEditText"
+                android:id="@+id/detailsEditText"
                 />
 
         </android.support.design.widget.TextInputLayout>

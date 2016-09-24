@@ -9,9 +9,9 @@
         android:icon="@drawable/ic_receipt_black_24dp"
         android:id="@+id/board_list"></item>
 
-    <item android:title="Workshops"
+    <item android:title="Events"
         android:icon="@drawable/ic_assignment_black_24dp"
-        android:id="@+id/workshop_list"></item>
+        android:id="@+id/event_list"></item>
 
 
     <item android:title="More">
@@ -39,11 +39,8 @@
                         android:icon="@drawable/ic_create_black_24dp"
                         android:id="@+id/post_blog_list"></item>
 
-                    <item android:title="Workshop"
-                        android:icon="@drawable/ic_create_black_24dp"
-                        android:id="@+id/post_workshop_list"></item>
 
-                    <item android:title="Meetup/Event"
+                    <item android:title="Event"
                         android:icon="@drawable/ic_create_black_24dp"
                         android:id="@+id/post_event_list"></item>
 

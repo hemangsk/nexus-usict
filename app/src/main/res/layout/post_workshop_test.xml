@@ -29,7 +29,7 @@
             android:layout_marginLeft="16dp"
             android:layout_marginRight="16dp"
             android:layout_height="match_parent"
-            app:theme="@style/WorkshopTitleEditText"
+            app:theme="@style/eventTitleEditText"
             >
 
             <EditText
@@ -37,8 +37,8 @@
                 android:layout_height="wrap_content"
                 android:hint="Workshop Title"
                 android:textSize="24sp"
-                app:hintTextAppearance="@style/WorkshopTitleEditText"
-                android:id="@+id/workshopEditText"
+                app:hintTextAppearance="@style/eventTitleEditText"
+                android:id="@+id/eventEditText"
                 />
 
         </android.support.design.widget.TextInputLayout>
@@ -63,7 +63,7 @@
             android:layout_marginRight="16dp"
             android:layout_marginTop="8dp"
             android:layout_marginBottom="4dp"
-            android:id="@+id/instructorNameText"
+            android:id="@+id/organiserNameText"
             android:textColorHint="@color/colorHintText"
             android:background="@color/colorPrimaryHint"
             />
@@ -79,7 +79,7 @@
             android:letterSpacing="0.1"
             android:layout_marginRight="16dp"
             android:layout_marginBottom="4dp"
-            android:id="@+id/instructorContactText"
+            android:id="@+id/organiserContactText"
             android:textColorHint="@color/colorHintText"
             android:background="@color/colorPrimaryHint"
             />
@@ -105,7 +105,7 @@
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:text="PICK DATE"
-                    android:layout_below="@id/workshopEditText"
+                    android:layout_below="@id/eventEditText"
                     android:textSize="14sp"
                     android:id="@+id/button"
                     android:textColor="#c2c2c2"
@@ -293,7 +293,7 @@
             android:hint="INSTRUCTOR'S NOTES"
             android:fontFamily="sans-serif-light"
             android:letterSpacing="0.1"
-            android:id="@+id/instructorEditText"
+            android:id="@+id/detailsEditText"
             android:textSize="14sp"
             android:inputType="textMultiLine"
 

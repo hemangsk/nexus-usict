@@ -1,5 +1,26 @@
 <resources>
-    <string name="app_name">RNFApp</string>
+    <string name="app_name">nexUSICT</string>
     <string name="open_drawer">Open Drawer</string>
     <string name="close_drawer">Close Drawer</string>
+
+
+    <string-array name="blog_category">
+        <item>PICK A CATEGORY</item>
+        <item>Stories</item>
+        <item>Sports</item>
+        <item>Technology</item>
+        <item>Science</item>
+        <item>Social</item>
+        <item>College Diaries</item>
+    </string-array>
+
+    <string-array name="event_category">
+        <item>PICK A CATEGORY</item>
+        <item>WORKSHOP</item>
+        <item>SEMINAR</item>
+        <item>MEETUP</item>
+        <item>INTERACTIVE SESSION</item>
+        <item>OTHER</item>
+    </string-array>
+
 </resources>

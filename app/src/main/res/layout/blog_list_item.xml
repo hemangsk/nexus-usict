@@ -3,7 +3,7 @@
     android:orientation="vertical" android:layout_width="match_parent"
     android:layout_height="wrap_content"
     android:layout_margin="4dp"
-android:minHeight="190dp"
+android:maxHeight="190dp"
 
     android:padding="8dp">
 
@@ -14,61 +14,48 @@ android:minHeight="190dp"
 
 
     <ImageView
-        android:src="@drawable/scenery"
+        android:id="@+id/blog_img_view"
         android:scaleType="centerCrop"
         android:layout_width="match_parent"
         android:paddingBottom="10dp"
-        android:layout_height="80dp" />
+        android:layout_height="wrap_content"
+        android:maxHeight="150dp"
+       />
         <LinearLayout
             android:layout_width="match_parent"
             android:orientation="vertical"
             android:padding="5dp"
             android:layout_height="wrap_content">
     <TextView
-        fontPath="fonts/latoBlack.ttf"
-        android:textSize="20sp"
+        fontPath="fonts/quicksandBold.ttf"
+        android:textSize="16sp"
         android:text="Title"
         android:textAllCaps="true"
         android:padding="2dp"
+        android:textColor="#000"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:id="@+id/blog_title"/>
 
         <TextView
-            fontPath="fonts/latolight.ttf"
+            fontPath="fonts/fontinSansIb.otf"
             android:textSize="12sp"
             android:text="Title"
             android:padding="2dp"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:id="@+id/blog_subheading_text"/>
-        <TextView
-            fontPath="fonts/latoBold.ttf"
-            android:textAllCaps="true"
-            android:textSize="14sp"
-            android:text="Title"
-            android:padding="2dp"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:id="@+id/blog_author"/>
-    <TextView
-        fontPath="fonts/latoBlack.ttf"
-        android:textSize="12sp"
-        android:text="Title"
-        android:padding="2dp"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:id="@+id/blog_category"/>
+
+
 
      <TextView
-         fontPath="fonts/latoThin.ttf"
-         android:textAllCaps="true"
-         android:textSize="8sp"
-         android:text="Title"
+         fontPath="fonts/fontinSansRb.otf"
+         android:textSize="12sp"
+         android:text="This is a short summary of the article to be posted."
          android:padding="2dp"
          android:layout_width="wrap_content"
          android:layout_height="wrap_content"
-         android:id="@+id/blog_date"/>
+         android:id="@+id/blog_text"/>
 
     </LinearLayout>
     </LinearLayout>
